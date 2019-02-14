@@ -5,4 +5,5 @@ workflow "New workflow" {
 
 action "Hello World" {
   uses = "./hello"
+  args = "Hello, World."
 }
