@@ -4,7 +4,7 @@ set -ex
 
 if [ -z "$GITHUB_EVENT_PATH" ]
 then
-  export GITHUB_EVENT_PATH=/tmp/github-event-example/pull_request.synchronize.json
+  export GITHUB_EVENT_PATH=github-event-example/pull_request.synchronize.json
 fi
 
 env

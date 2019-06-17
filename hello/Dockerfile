@@ -1,4 +1,4 @@
-FROM debian:9.5-slim
+FROM quay.io/levii/debian:9.5-slim-with-jq
 
 LABEL "com.github.actions.name"="Hello World"
 LABEL "com.github.actions.description"="description"
@@ -7,12 +7,5 @@ LABEL "com.github.actions.color"="purple"
 
 LABEL "repository"="https://github.com/levii/gh-actions"
 
-RUN apt-get update \
- && apt-get install -y \
-      jq \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
-
 ADD entrypoint.sh /entrypoint.sh
-ADD github-event-example /tmp/github-event-example/
 ENTRYPOINT ["/entrypoint.sh"]
