@@ -2,8 +2,8 @@ workflow "New workflow" {
   on = "pull_request"
   resolves = [
     "Show Variables",
-    "Filter Pull Request Base Branch",
-    "Filter Pull Request Base Branch (release)",
+    "Comment On Pull Request",
+    "Comment On Pull Request (release)",
   ]
 }
 
@@ -29,7 +29,7 @@ action "Filter Pull Request Base Branch (release)" {
   args = "release"
 }
 
-action "Comment On Pull Request" {
+action "Comment On Pull Request (release)" {
   needs = "Filter Pull Request Base Branch (release)"
   uses = "actions/github@v1.0.0"
   args = "comment 'Hello target is release'"
