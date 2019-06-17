@@ -1,9 +1,9 @@
 workflow "New workflow" {
-  on = "push"
-  resolves = ["Hello World"]
+  on = "pull_request"
+  resolves = ["Show Variables"]
 }
 
-action "Hello World" {
+action "Show Variables" {
   uses = "./hello"
   args = "Hello, World."
 }
