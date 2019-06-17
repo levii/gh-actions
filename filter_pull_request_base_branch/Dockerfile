@@ -1,9 +1,9 @@
 FROM quay.io/levii/debian:9.5-slim-with-jq
 
-LABEL "com.github.actions.name"="Hello World"
-LABEL "com.github.actions.description"="description"
-LABEL "com.github.actions.icon"="mic"
-LABEL "com.github.actions.color"="purple"
+LABEL "com.github.actions.name"="Filter Pull Request Base Branch"
+LABEL "com.github.actions.description"="filters to stop workflows"
+LABEL "com.github.actions.icon"="filter"
+LABEL "com.github.actions.color"="gray-dark"
 
 LABEL "repository"="https://github.com/levii/gh-actions"
 
