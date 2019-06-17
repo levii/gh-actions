@@ -10,6 +10,6 @@ action "Show Variables" {
 
 action "Comment On Pull Request" {
   uses = "actions/github@v1.0.0"
-  args = "comment "Hello World""
+  args = "comment 'Hello World'"
   secrets = ["GITHUB_TOKEN"]
 }
