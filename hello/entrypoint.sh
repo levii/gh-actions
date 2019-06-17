@@ -2,5 +2,5 @@
 
 env
 echo
-cat $GITHUB_EVENT_PATH
+[[ -e $GITHUB_EVENT_PATH ]] && cat $GITHUB_EVENT_PATH | jq
 sh -c "echo $*"
