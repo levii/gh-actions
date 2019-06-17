@@ -14,4 +14,5 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 ADD entrypoint.sh /entrypoint.sh
+ADD github-event-example /tmp/github-event-example/
 ENTRYPOINT ["/entrypoint.sh"]
