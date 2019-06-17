@@ -18,7 +18,7 @@ action "Filter Pull Request Base Branch" {
 }
 
 action "Comment On Pull Request" {
-  need = ["Filter Pull Request Base Branch"]
+  needs = "Filter Pull Request Base Branch"
   uses = "actions/github@v1.0.0"
   args = "comment 'Hello target is master'"
   secrets = ["GITHUB_TOKEN"]
@@ -30,7 +30,7 @@ action "Filter Pull Request Base Branch (release)" {
 }
 
 action "Comment On Pull Request" {
-  need = ["Filter Pull Request Base Branch (release)"]
+  needs = "Filter Pull Request Base Branch (release)"
   uses = "actions/github@v1.0.0"
   args = "comment 'Hello target is release'"
   secrets = ["GITHUB_TOKEN"]
