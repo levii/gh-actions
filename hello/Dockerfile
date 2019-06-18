@@ -1,4 +1,4 @@
-FROM debian:9.5-slim
+FROM quay.io/levii/debian:9.5-slim-with-jq
 
 LABEL "com.github.actions.name"="Hello World"
 LABEL "com.github.actions.description"="description"
